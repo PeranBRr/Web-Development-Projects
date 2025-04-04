@@ -1,6 +1,6 @@
 # 🎹 Musical Instruments Explorer
 
-![Project Screenshot](screenshot.png) 
+![Project Screenshot](screenshot.jpeg) 
 
 A responsive website showcasing keyboard and percussion instruments, built as my first web development project.
 
