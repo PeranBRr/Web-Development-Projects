@@ -1,0 +1,369 @@
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Variáveis CSS para reutilização */
+:root {
+    --azul-claro: #e6f2ff;
+    --azul-escuro: #1a2f4b;
+    --dourado: #d4af37;
+    --marfim: #f5f5dc;
+    --sombra: 0 2px 10px rgba(0,0,0,0.1);
+    --borda-radius: 8px;
+    --transicao: all 0.3s ease;
+  }
+
+  .tema-alternativo {
+    --azul-claro: #2c3e50;
+    --azul-escuro: #1a1a2e;
+    background-image: linear-gradient(to bottom, #2c3e50, #34495e);
+    color: #ecf0f1;
+  }
+
+  .tema-alternativo .container,
+  .tema-alternativo .conteiner{
+    background-color: rgba(17, 29, 41, 0.9);
+    color: #ecf0f1;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra);
+  }
+
+  .tema-alternativo .container h2{
+    color: #ecf0f1;
+  }
+
+  .tema-alternativo .teclado,
+  .tema-alternativo .piano,
+  .tema-alternativo .bateria,
+  .tema-alternativo .tambor,
+  .tema-alternativo .orgao,
+  .tema-alternativo .pandeiro,
+  .tema-alternativo .triangulo,
+  .tema-alternativo .sintetizador,
+  .tema-alternativo .pedro,
+  .tema-alternativo .jose {
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #ecf0f1;
+    border-color: var(--dourado);
+  }
+  
+  
+  /* Reset e Estilos Base */
+  body {
+    background-color: var(--azul-claro);
+    background-image: linear-gradient(to bottom, var(--azul-claro), #cce6ff);
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(14px + 0.3vw);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+  }
+  
+  /* Layout do Cabeçalho */
+  header {
+    background: var(--azul-escuro);
+    color: var(--marfim);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--sombra);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+  
+  /* Navegação Responsiva */
+  nav ul {
+    display: flex;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: var(--dourado);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao);
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  nav a:hover {
+    color: var(--marfim);
+    background: rgba(255,255,255,0.1);
+  }
+  
+  /* Containers Principais */
+  .container, .conteiner {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: var(--borda-radius);
+    padding: 1.5rem;
+    margin: 1.25rem auto;
+    width: 85%;
+    max-width: 1200px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  }
+
+  .container h2{
+    text-align: center;
+    color:#1a2f4b;
+    font-size: 1.5rem;
+  }
+  
+  /* Grid de Instrumentos - Padrão 2x2 */
+  .teclaveis, .percussao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .teclaveis a, .percussao a{
+    text-decoration: none;
+    color: var(--marfim);
+    background-color:#13417c;
+    border-radius: var(--borda-radius);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: var(--transicao);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem;
+    margin: 0px;
+    min-width: 120px;
+    
+  }
+
+  .teclaveis a:hover, .percussao a:hover{
+    background-color: var(--azul-escuro);
+    color: var(--marfim);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Cards de Instrumentos */
+  .teclado, .piano, .bateria, .tambor, .orgao, .sintetizador, .pandeiro, .triangulo {
+    background: white;
+    padding: 1.25rem;
+    border-radius: var(--borda-radius);
+    border-top: 4px solid var(--azul-escuro);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: var(--transicao);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .teclado:hover, .piano:hover, .bateria:hover, .tambor:hover,
+  .orgao:hover, .sintetizador:hover, .pandeiro:hover, .triangulo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: var(--azul-escuro);
+    color: var(--marfim);
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  }
+
+  .autores{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+
+  }
+
+  .pedro, .jose{
+    background: white;
+    padding: 1.25rem;
+    color: var(--azul-escuro);
+    border-radius: var(--borda-radius);
+    border-top: 4px solid var(--azul-escuro);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: var(--transicao);
+  }
+
+  .fraseP, .fraseJ {
+    font-style: italic;
+    margin-top: 1rem;
+    text-align: right;
+    color: var(--dourado);
+}
+
+  
+  /* Imagens Responsivas */
+  .piano-img, .bateria-img, .tambor-img, 
+  .teclado-img, .orgao-img, .sintetizador-img, .pandeiro-img, .triangulo-img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: var(--borda-radius);
+    margin: 0.625rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    align-self: center;
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--borda-radius);
+    margin: 0.625rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  #temaBtn {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--borda-radius);
+    cursor: pointer;
+    transition: var(--transicao);
+    order: 1;
+}
+
+#temaBtn:hover {
+    background-color: var(--marfim);
+    transform: scale(1.05);
+}
+
+  /* ========== MEDIA QUERIES ========== */
+  
+  /* Desktop Médio (1024px - 1200px) */
+  @media (max-width: 1200px) {
+    .container, .conteiner {
+      width: 90%;
+    }
+  }
+  
+  /* Tablet (768px - 1024px) */
+  @media (max-width: 1024px) {
+    .container, .conteiner {
+      width: 92%;
+      padding: 1.25rem;
+    }
+    
+    .piano-img, .bateria-img, .tambor-img, 
+    .teclado-img, .orgao-img, .sintetizador-img, .pandeiro-img, .triangulo-img {
+      max-height: 220px;
+    }
+  }
+  
+  /* Tablet Pequeno (600px - 768px) */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    
+    .container, .conteiner {
+      width: 95%;
+      padding: 1.2rem;
+    }
+    
+    .teclaveis, .percussao {
+      gap: 1.2rem;
+    }
+  }
+  
+  /* Mobile Grande (480px - 600px) */
+  @media (max-width: 600px) {
+    :root {
+      font-size: calc(14px + 0.2vw);
+    }
+    
+    .teclaveis, .percussao {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .container, .conteiner {
+      padding: 1rem;
+      width: 97%;
+    }
+    
+    .teclado, .piano, .bateria, .tambor,
+    .orgao, .sintetizador {
+      padding: 1.1rem;
+    }
+    
+    footer {
+      padding: 0.9rem;
+    }
+  }
+  
+  /* Mobile Pequeno (até 480px) */
+  @media (max-width: 480px) {
+    :root {
+      font-size: calc(13px + 0.3vw);
+    }
+    
+    nav a {
+      padding: 0.4rem;
+      font-size: 0.95rem;
+    }
+    
+    .piano-img, .bateria-img, .tambor-img, 
+    .teclado-img, .orgao-img, .sintetizador-img {
+      max-height: 200px;
+    }
+    
+    .banner-img {
+      max-height: 300px;
+    }
+  }
+  
+  /* Menu Mobile */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--marfim);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      order: -1;
+    }
+    
+    nav {
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    
+    nav.active {
+      max-height: 500px;
+      padding: 1rem 0;
+    }
+  }
